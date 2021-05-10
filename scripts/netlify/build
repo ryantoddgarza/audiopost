@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+cd packages/audiopost-site
+npm run build
