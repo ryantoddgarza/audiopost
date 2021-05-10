@@ -1,0 +1,6 @@
+[build]
+command="./scripts/netlify/build"
+publish="packages/audiopost-site/public"
+
+[build.environment]
+NODE_VERSION="15"
