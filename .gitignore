@@ -2,5 +2,8 @@
 *.env
 *.log
 node_modules/
-packages/**/package-lock.json
+package-lock.json
 packages/**/public/
+
+# Preserve lock files for applications
+!packages/audiopost-site/package-lock.json

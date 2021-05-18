@@ -4,6 +4,18 @@
 
 This project uses [npm](https://www.npmjs.com/) as its package manager, software registry, and monorepo utility. Because it requires [workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) introduced in version 7, ensure that you are using at minimum npm version 7 included in [Node.js](https://nodejs.org/) version 15. Ease of upgrade depends on your [installation method](https://www.npmjs.com/get-npm).
 
+### Lock files
+
+`package-lock.json` files are excluded from version control by default in `.gitignore`. Lock files should be preserved for applications and may be overridden with the following pattern.
+
+```gitignore
+# Per workspace
+!workspace/*/package-lock.json
+
+# Per package
+!workspace/pkgname/package-lock.json
+```
+
 ## Git
 
 This project uses [Git](https://git-scm.com/) as its version control system.
