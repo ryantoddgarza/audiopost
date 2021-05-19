@@ -1,7 +1,7 @@
 import React, { Children, cloneElement } from 'react';
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
 const Layout: React.FunctionComponent<Props> = ({ children }: Props) => {
