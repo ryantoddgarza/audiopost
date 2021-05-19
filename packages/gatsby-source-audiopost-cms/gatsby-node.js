@@ -6,7 +6,12 @@ exports.sourceNodes = async ({
   createContentDigest,
   createNodeId,
 }) => {
-  const sources = [];
+  const sources = [
+    {
+      type: 'Pages',
+      dirpath: path.join(__dirname, 'src', 'pages'),
+    },
+  ];
 
   sources.forEach(({ type, dirpath }) => {
     const files = fs.readdirSync(dirpath);
