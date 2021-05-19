@@ -7,5 +7,6 @@ module.exports = {
     titleTemplate: `%s | ${site.title}`,
     description: site.description,
     author: site.author,
+    email: site.email,
   },
 };

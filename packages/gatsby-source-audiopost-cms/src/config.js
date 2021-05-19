@@ -4,4 +4,5 @@ module.exports = {
   description:
     'Music and audio post production suite specializing in mixing, mastering, recording, and production.',
   author: 'Ryan Todd Garza',
+  email: 'kyle@audiopost.studio',
 };
