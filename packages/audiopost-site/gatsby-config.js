@@ -9,7 +9,7 @@ module.exports = {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
         helmet: {
-          title: site.title,
+          title: site.shortDescription,
           titleTemplate: site.titleTemplate,
           meta: [
             { name: 'description', content: site.description },
