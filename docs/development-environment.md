@@ -2,7 +2,7 @@
 
 ## npm
 
-This project uses [npm](https://www.npmjs.com/) as its package manager, software registry, and monorepo utility. Because it requires [workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) introduced in version 7, ensure that you are using at minimum npm version 7 included in [Node.js](https://nodejs.org/) version 15. Ease of upgrade depends on your [installation method](https://www.npmjs.com/get-npm).
+This project uses [npm](https://www.npmjs.com/) as its package manager, software registry, and monorepo utility. Because it requires [workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) and [automatic peer dependency installation](https://nodejs.org/es/blog/npm/peer-dependencies/) introduced in version 7, ensure that you are using at minimum npm version 7 included in [Node.js](https://nodejs.org/) version 15. Ease of upgrade depends on your [installation method](https://www.npmjs.com/get-npm).
 
 ### Lock files
 
