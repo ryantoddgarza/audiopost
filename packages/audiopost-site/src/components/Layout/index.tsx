@@ -1,4 +1,5 @@
 import React, { Children, cloneElement } from 'react';
+import { theme } from 'audiopost-design';
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -7,6 +8,8 @@ interface Props {
 const style = {
   maxWidth: '640px',
   margin: 'auto',
+  backgroundColor: theme.colors.background,
+  color: theme.colors.text,
   fontFamily: 'sans-serif',
   lineHeight: 1.375,
 };

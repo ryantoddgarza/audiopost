@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { theme } from 'audiopost-design';
 
 const Home: FunctionComponent = () => {
   const {
@@ -38,7 +39,11 @@ const Home: FunctionComponent = () => {
               ))}
             </ul>
           )}
-          {component === 'contact' && <a href={`mailto:${email}`}>{email}</a>}
+          {component === 'contact' && (
+            <a href={`mailto:${email}`} style={{ color: theme.colors.link }}>
+              {email}
+            </a>
+          )}
         </section>
       ))}
     </div>
