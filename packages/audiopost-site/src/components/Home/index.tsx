@@ -4,13 +4,13 @@ import { Helmet } from 'react-helmet-async';
 
 const Home: FunctionComponent = () => {
   const {
-    pages: {
+    registers: {
       settings: { title },
       sections,
     },
   } = useStaticQuery(graphql`
     query HomeQuery {
-      pages(settings: { slug: { eq: "/" } }) {
+      registers(settings: { slug: { eq: "/" } }) {
         sections {
           component
           title

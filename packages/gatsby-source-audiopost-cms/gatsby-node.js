@@ -8,8 +8,8 @@ exports.sourceNodes = async ({
 }) => {
   const sources = [
     {
-      type: 'Pages',
-      dirpath: path.join(__dirname, 'src', 'pages'),
+      type: 'Registers',
+      dirpath: path.join(__dirname, 'src', 'registers'),
     },
   ];
 
