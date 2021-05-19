@@ -3,9 +3,17 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const Home: FunctionComponent = () => {
   const {
+    site: {
+      siteMetadata: { email },
+    },
     registers: { sections },
   } = useStaticQuery(graphql`
     query HomeQuery {
+      site {
+        siteMetadata {
+          email
+        }
+      }
       registers(settings: { slug: { eq: "/" } }) {
         sections {
           component
@@ -19,7 +27,7 @@ const Home: FunctionComponent = () => {
 
   return (
     <div>
-      {sections.map(({ title, body, list }, i: number) => (
+      {sections.map(({ component, title, body, list }, i: number) => (
         <section key={`${i}`}>
           {title && <h3>{title}</h3>}
           {body && <p>{body}</p>}
@@ -30,6 +38,7 @@ const Home: FunctionComponent = () => {
               ))}
             </ul>
           )}
+          {component === 'contact' && <a href={`mailto:${email}`}>{email}</a>}
         </section>
       ))}
     </div>
