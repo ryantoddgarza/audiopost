@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Layout, Home } from '../components';
 
-const HomePage: React.FunctionComponent = () => (
+const HomePage: FunctionComponent = () => (
   <Layout>
     <Home />
   </Layout>

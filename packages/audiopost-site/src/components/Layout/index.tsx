@@ -1,8 +1,8 @@
-import React, { Children, cloneElement } from 'react';
+import React, { Children, FunctionComponent, ReactElement, cloneElement } from 'react';
 import { theme } from 'audiopost-design';
 
 interface Props {
-  children: JSX.Element | JSX.Element[];
+  children: ReactElement | ReactElement[];
 }
 
 const style = {
@@ -14,7 +14,7 @@ const style = {
   lineHeight: 1.375,
 };
 
-const Layout: React.FunctionComponent<Props> = ({ children }: Props) => {
+const Layout: FunctionComponent<Props> = ({ children }: Props) => {
   const childrenWithProps = Children.map(children, (child) =>
     cloneElement(child, {})
   );
