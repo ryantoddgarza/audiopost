@@ -5,6 +5,7 @@ const { siteMetadata: site } = config;
 module.exports = {
   plugins: [
     'gatsby-source-audiopost-cms',
+    'gatsby-plugin-remove-trailing-slashes',
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
