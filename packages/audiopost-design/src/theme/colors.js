@@ -3,7 +3,7 @@ import gray from '../core/system/colors/gray';
 
 const themeColors = {
   primary: gold[40],
-  primaryHover: gold[30],
+  primaryHover: gold[50],
 };
 
 const textColors = {
@@ -11,13 +11,13 @@ const textColors = {
   textWeak: gray[50],
   textWeakHover: gray[90],
 
-  link: gold[30],
-  linkHover: gold[20],
+  link: gold[70],
+  linkHover: gold[80],
 };
 
 const backgroundColors = {
   background: gray[1],
-  backgroundWeak: '#ffffff',
+  backgroundWeak: 'white',
   backgroundMedium: gray[5],
   backgroundStrong: gray[10],
 };
