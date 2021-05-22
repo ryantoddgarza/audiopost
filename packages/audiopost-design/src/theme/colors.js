@@ -1,5 +1,5 @@
-import gold from '../system/colors/gold';
-import gray from '../system/colors/gray';
+import gold from '../core/system/colors/gold';
+import gray from '../core/system/colors/gray';
 
 const themeColors = {
   primary: gold[40],
