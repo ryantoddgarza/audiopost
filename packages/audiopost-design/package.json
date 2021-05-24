@@ -1,6 +1,6 @@
 {
   "name": "audiopost-design",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Ryan Todd Garza <ryantoddgarza@gmail.com>",
   "sass": "src/stylesheets/apds.scss",
   "homepage": "https://github.com/ryantoddgarza/audiopost/tree/main/packages/audiopost-design#readme",
@@ -11,5 +11,12 @@
   },
   "bugs": {
     "url": "https://github.com/ryantoddgarza/audiopost/issues"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": "^17"
   }
 }
