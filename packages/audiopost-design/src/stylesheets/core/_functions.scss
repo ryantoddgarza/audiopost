@@ -1,0 +1,15 @@
+@function breakpoint($value) {
+  @return map-get($system-breakpoint, $value);
+}
+
+@function font-size($value) {
+  @return map-get($system-type-scale, $value);
+}
+
+@function line-height($value) {
+  @return map-get($system-line-height, $value);
+}
+
+@function spacing($value) {
+  @return map-get($system-spacing, $value);
+}
