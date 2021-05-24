@@ -5,6 +5,7 @@ const { siteMetadata: site } = config;
 module.exports = {
   plugins: [
     'gatsby-source-audiopost-cms',
+    'gatsby-plugin-sass',
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
