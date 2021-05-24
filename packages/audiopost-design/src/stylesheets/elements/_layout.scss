@@ -2,8 +2,8 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: spacing(3);
-  padding-right: spacing(3);
+  padding-left: spacing($theme-site-margins-width);
+  padding-right: spacing($theme-site-margins-width);
 
   &--constrain {
     max-width: breakpoint("tablet");
