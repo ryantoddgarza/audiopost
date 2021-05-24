@@ -1,6 +1,7 @@
 .section {
   padding-top: spacing(4);
   padding-bottom: spacing(4);
+  @include content-styles;
 
   &--light {
     color: $theme-color-text;

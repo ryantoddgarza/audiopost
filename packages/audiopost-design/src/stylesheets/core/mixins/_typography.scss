@@ -1,0 +1,33 @@
+@mixin paragraph-styles {
+  p {
+    margin-top: spacing(3);
+  }
+}
+
+@mixin link-styles {
+  a {
+    color: $theme-color-link;
+
+    &:hover {
+      color: $theme-color-link-hover;
+    }
+
+    &:active {
+      color: $theme-color-link-active;
+    }
+  }
+}
+
+@mixin headings-styles {
+  h1 {
+    font-size: font-size(8);
+  }
+
+  h2 {
+    font-size: font-size(7);
+  }
+
+  h3 {
+    font-size: font-size(6);
+  }
+}

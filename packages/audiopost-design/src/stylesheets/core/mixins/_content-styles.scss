@@ -1,0 +1,6 @@
+@mixin content-styles {
+  @include paragraph-styles;
+  @include link-styles;
+  @include headings-styles;
+  @include list-styles;
+}
