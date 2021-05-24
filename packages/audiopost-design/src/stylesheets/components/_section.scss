@@ -1,0 +1,14 @@
+.section {
+  padding-top: spacing(4);
+  padding-bottom: spacing(4);
+
+  &--light {
+    color: $theme-color-text;
+    background: $theme-color-background;
+  }
+
+  &--dark {
+    color: $theme-color-text-inverse;
+    background: $theme-color-background-inverse;
+  }
+}
