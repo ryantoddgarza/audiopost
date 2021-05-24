@@ -6,6 +6,10 @@
   @return map-get($system-type-scale, $value);
 }
 
+@function letter-spacing($value) {
+  @return map-get($system-letter-spacing, $value);
+}
+
 @function line-height($value) {
   @return map-get($system-line-height, $value);
 }
