@@ -1,11 +1,17 @@
 const config = require('gatsby-source-audiopost-cms/gatsby-config');
+const autoprefixer = require('autoprefixer');
 
 const { siteMetadata: site } = config;
 
 module.exports = {
   plugins: [
     'gatsby-source-audiopost-cms',
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [autoprefixer()],
+      },
+    },
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
