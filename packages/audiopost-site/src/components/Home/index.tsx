@@ -31,7 +31,6 @@ const Home: FunctionComponent = () => {
   return (
     <div>
       <Hero
-        size={heroSizes.FULLSCREEN}
         theme={heroThemes.DARK}
         titleStart={siteName}
         titleEnd="Studio"
