@@ -1,9 +1,18 @@
+@use "sass:math";
+
 @function breakpoint($value) {
   @return map-get($system-breakpoint, $value);
 }
 
 @function font-size($value) {
   @return map-get($system-type-scale, $value);
+}
+
+@function font-size-fluid($size, $num: 2, $den: 320) {
+  $adjusted-base: #{$size - $num}px;
+  $adjusted-vw: #{math.div($num * 100, $den)}vw;
+
+  @return calc(#{$adjusted-base} + #{$adjusted-vw});
 }
 
 @function letter-spacing($value) {
