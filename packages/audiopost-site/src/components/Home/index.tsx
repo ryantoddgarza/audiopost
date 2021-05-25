@@ -1,16 +1,19 @@
 import React, { FunctionComponent } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Hero, heroThemes, heroSizes } from 'audiopost-design';
 
 const Home: FunctionComponent = () => {
   const {
     site: {
-      siteMetadata: { email },
+      siteMetadata: { siteName, description, email },
     },
     registers: { sections },
   } = useStaticQuery(graphql`
     query HomeQuery {
       site {
         siteMetadata {
+          siteName
+          description
           email
         }
       }
@@ -27,6 +30,14 @@ const Home: FunctionComponent = () => {
 
   return (
     <div>
+      <Hero
+        size={heroSizes.FULLSCREEN}
+        theme={heroThemes.DARK}
+        titleStart={siteName}
+        titleEnd="Studio"
+        subtitle="Nashville, Tennessee"
+        copy={description}
+      />
       {sections.map(({ component, title, body, list }, i: number) => (
         <section key={`${i}`} className="section section--light">
           <div className="container container--constrain">
@@ -34,7 +45,7 @@ const Home: FunctionComponent = () => {
             {body && <p>{body}</p>}
             {list && (
               <ul>
-                {list.map((item, i: number) => (
+                {list.map((item: string, i: number) => (
                   <li key={`${i}`}>{item}</li>
                 ))}
               </ul>
