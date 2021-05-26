@@ -40,7 +40,8 @@
     }
 
     .hero__title {
-      align-self: flex-end;
+      flex: 1;
+      text-align: right;
     }
   }
 
