@@ -1,0 +1,11 @@
+@mixin font-outline {
+  -webkit-text-stroke-width: 1px;
+
+  @include at-media("tablet") {
+    -webkit-text-stroke-width: 1.5px;
+  }
+
+  @include at-media("desktop") {
+    -webkit-text-stroke-width: 2px;
+  }
+}
