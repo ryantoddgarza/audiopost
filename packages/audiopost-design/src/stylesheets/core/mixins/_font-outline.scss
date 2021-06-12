@@ -1,11 +1,22 @@
-@mixin font-outline {
-  -webkit-text-stroke-width: 1px;
+@mixin font-outline($ol-color: $theme-color-text, $weight: "medium") {
+  color: transparent;
+  -webkit-text-stroke-color: $ol-color;
 
-  @include at-media("tablet") {
-    -webkit-text-stroke-width: 1.5px;
-  }
+  $stroke-widths: (
+    medium: 1px,
+    semibold: 1.5px,
+    bold: 2px,
+  );
 
-  @include at-media("desktop") {
-    -webkit-text-stroke-width: 2px;
+  @if $weight == "responsive" {
+    -webkit-text-stroke-width: map-get($stroke-widths, "medium");
+    @include at-media("tablet") {
+      -webkit-text-stroke-width: map-get($stroke-widths, "semibold");
+    }
+    @include at-media("desktop") {
+      -webkit-text-stroke-width: map-get($stroke-widths, "bold");
+    }
+  } @else {
+    -webkit-text-stroke-width: map-get($stroke-widths, $weight);
   }
 }
