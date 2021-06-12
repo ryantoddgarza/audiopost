@@ -5,6 +5,8 @@ const { siteMetadata: site } = config;
 
 module.exports = {
   plugins: [
+    // 1. first priority plugins
+    // 2. source plugins
     'gatsby-source-audiopost-cms',
     {
       resolve: 'gatsby-plugin-sass',
@@ -12,6 +14,8 @@ module.exports = {
         postCssPlugins: [autoprefixer()],
       },
     },
+    // 3. transformer plugins
+    // 4. other plugins
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
@@ -25,7 +29,6 @@ module.exports = {
         },
       },
     },
-    // Last priority plugins
-    'gatsby-plugin-remove-trailing-slashes',
+    // 5. last priority plugins
   ],
 };
