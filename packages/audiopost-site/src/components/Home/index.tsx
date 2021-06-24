@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Hero, heroThemes, heroSizes } from 'audiopost-design';
+import { Hero, heroThemes } from 'audiopost-design';
 
 const Home: FunctionComponent = () => {
   const {
@@ -40,7 +40,7 @@ const Home: FunctionComponent = () => {
       {sections.map(({ component, title, body, list }, i: number) => (
         <section key={`${i}`} className="section section--light">
           <div className="container container--constrain">
-            {title && <h3>{title}</h3>}
+            {title && <h3 className="heading">{title}</h3>}
             {body && <p>{body}</p>}
             {list && (
               <ul>
