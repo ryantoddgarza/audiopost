@@ -11,8 +11,7 @@ const Hero: FunctionComponent<HeroProps> = ({
   theme,
 }: HeroProps) => {
   const getHeroClasses = () => {
-    const heroClasses = ['hero', `hero--${size}`, `hero--${theme}`];
-
+    const heroClasses = ['hero', size, theme];
     return heroClasses.join(' ');
   };
 

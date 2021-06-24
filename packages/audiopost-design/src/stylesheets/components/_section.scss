@@ -2,14 +2,24 @@
   padding-top: spacing(4);
   padding-bottom: spacing(4);
   @include content-styles;
+}
 
-  &--light {
-    color: $theme-color-text;
-    background: $theme-color-background;
-  }
+.section .heading {
+  font-size: font-size-fluid(32, 4);
+  font-size: 48px;
+  font-weight: $theme-font-weight-bold;
+  line-height: line-height($theme-line-height-heading);
+  @include font-outline;
+}
 
-  &--dark {
-    color: $theme-color-text-inverse;
-    background: $theme-color-background-inverse;
-  }
+// Themes
+
+.section--light {
+  color: $theme-color-text;
+  background-color: $theme-color-background;
+}
+
+.section--dark {
+  color: $theme-color-text-inverse;
+  background-color: $theme-color-background-inverse;
 }
