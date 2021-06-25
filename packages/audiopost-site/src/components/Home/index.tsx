@@ -5,8 +5,9 @@ import { Hero, heroThemes } from 'audiopost-design';
 const Home: FunctionComponent = () => {
   const {
     site: {
-      siteMetadata: { siteName, description, email },
+      siteMetadata: { email },
     },
+    hero,
     registers: { sections },
   } = useStaticQuery(graphql`
     query HomeQuery {
@@ -15,6 +16,14 @@ const Home: FunctionComponent = () => {
           siteName
           description
           email
+        }
+      }
+      hero: contentfulHero(contentful_id: { eq: "2uaV2ZOSMmFKEubhwE1b5h" }) {
+        subtitle
+        titleEnd
+        titleStart
+        copy {
+          copy
         }
       }
       registers(settings: { slug: { eq: "/" } }) {
@@ -32,10 +41,10 @@ const Home: FunctionComponent = () => {
     <div>
       <Hero
         theme={heroThemes.DARK}
-        titleStart={siteName}
-        titleEnd="Studio"
-        subtitle="Nashville, Tennessee"
-        copy={description}
+        titleStart={hero.titleStart}
+        titleEnd={hero.titleEnd}
+        subtitle={hero.subtitle}
+        copy={hero.copy.copy}
       />
       {sections.map(({ component, title, body, list }, i: number) => (
         <section key={`${i}`} className="section section--light">
