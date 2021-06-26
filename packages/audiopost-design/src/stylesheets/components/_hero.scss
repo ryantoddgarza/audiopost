@@ -96,40 +96,40 @@
 // Theme variants
 
 .hero.primary {
-  color: $theme-color-text-inverse;
-  background-color: $theme-color-primary;
+  color: color($theme-color-text-inverse);
+  background-color: color($theme-color-primary);
 
   .title {
-    @include font-outline($theme-color-text-inverse, "responsive");
+    @include font-outline(color($theme-color-text-inverse), "responsive");
   }
 
   .subtitle {
-    color: $theme-color-text-inverse;
+    color: color($theme-color-text-inverse);
   }
 }
 
 .hero.light {
-  color: $theme-color-text;
+  color: color($theme-color-text);
   background-color: $theme-color-background;
 
   .title {
-    @include font-outline($theme-color-text, "responsive");
+    @include font-outline(color($theme-color-text), "responsive");
   }
 
   .subtitle {
-    color: $theme-color-primary;
+    color: color($theme-color-primary);
   }
 }
 
 .hero.dark {
-  color: $theme-color-text-inverse;
-  background-color: $theme-color-background-inverse;
+  color: color($theme-color-text-inverse);
+  background-color: color($theme-color-background-inverse);
 
   .title {
-    @include font-outline($theme-color-text-inverse, "responsive");
+    @include font-outline(color($theme-color-text-inverse), "responsive");
   }
 
   .subtitle {
-    color: $theme-color-primary;
+    color: color($theme-color-primary);
   }
 }

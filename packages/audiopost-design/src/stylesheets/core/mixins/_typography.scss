@@ -6,14 +6,14 @@
 
 @mixin link-styles {
   a {
-    color: $theme-color-link;
+    color: color($theme-color-link);
 
     &:hover {
-      color: $theme-color-link-hover;
+      color: color($theme-color-link-hover);
     }
 
     &:active {
-      color: $theme-color-link-active;
+      color: color($theme-color-link-active);
     }
   }
 }

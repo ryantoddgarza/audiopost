@@ -1,4 +1,4 @@
-@mixin font-outline($ol-color: $theme-color-text, $weight: "medium") {
+@mixin font-outline($ol-color: color($theme-color-text), $weight: "medium") {
   color: transparent;
   -webkit-text-stroke-color: $ol-color;
 

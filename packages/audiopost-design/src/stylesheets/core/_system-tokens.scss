@@ -38,7 +38,7 @@ $system-line-height: (
   3: 1.32,
   4: 1.5,
   5: 1.64,
-  6: 1.80,
+  6: 1.8,
   7: 2,
 );
 
@@ -51,27 +51,29 @@ $system-spacing: (
   6: 96px,
 );
 
-$color-gray-1: #fcfcfc;
-$color-gray-2: #f9f9f9;
-$color-gray-3: #f6f6f6;
-$color-gray-4: #f3f3f3;
-$color-gray-5: #f0f0f0;
-$color-gray-10: #e6e6e6;
-$color-gray-20: #c9c9c9;
-$color-gray-30: #adadad;
-$color-gray-40: #919191;
-$color-gray-50: #757575;
-$color-gray-60: #5c5c5c;
-$color-gray-70: #454545;
-$color-gray-80: #2e2e2e;
-$color-gray-90: #1b1b1b;
-
-$color-gold-10: #f7f1de;
-$color-gold-20: #eee0b9;
-$color-gold-30: #e6d094;
-$color-gold-40: #ddc06f;
-$color-gold-50: #d3ae45;
-$color-gold-60: #b6912b;
-$color-gold-70: #886d20;
-$color-gold-80: #5b4915;
-$color-gold-90: #2d240b;
+$system-color: (
+  // Gray
+  gray-1: #fcfcfc,
+  gray-2: #f9f9f9,
+  gray-3: #f6f6f6,
+  gray-4: #f3f3f3,
+  gray-5: #f0f0f0,
+  gray-10: #e6e6e6,
+  gray-20: #c9c9c9,
+  gray-30: #adadad,
+  gray-40: #919191,
+  gray-50: #757575,
+  gray-60: #5c5c5c,
+  gray-70: #454545,
+  gray-80: #2e2e2e,
+  gray-90: #1b1b1b,
+  gold-10: #f7f1de,
+  gold-20: #eee0b9,
+  gold-30: #e6d094,
+  gold-40: #ddc06f,
+  gold-50: #d3ae45,
+  gold-60: #b6912b,
+  gold-70: #886d20,
+  gold-80: #5b4915,
+  gold-90: #2d240b
+);
