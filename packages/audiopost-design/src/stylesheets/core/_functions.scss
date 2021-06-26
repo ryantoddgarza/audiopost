@@ -27,6 +27,6 @@
   @return map-get($system-line-height, $value);
 }
 
-@function spacing($value) {
-  @return map-get($system-spacing, $value);
+@function unit($value) {
+  @return map-get($system-spacing, "base") * $value;
 }

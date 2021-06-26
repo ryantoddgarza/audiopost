@@ -1,10 +1,10 @@
 @mixin list-styles {
   ul,
   ol {
-    margin-top: spacing(3);
+    margin-top: unit(2);
 
     li {
-      margin-left: spacing(3);
+      margin-left: unit(2);
     }
   }
 }

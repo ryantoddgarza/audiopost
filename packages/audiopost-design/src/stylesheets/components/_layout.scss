@@ -1,18 +1,34 @@
 .layout.app {
   position: relative;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 
   @include at-media("desktop") {
-    flex-direction: row-reverse;
+    padding-right: unit(8);
   }
 }
 
 .layout.main {
-  flex: 1;
+  position: relative;
+
+  @include at-media("desktop") {
+  }
 }
 
 .layout.nav {
-  flex: none;
+  position: relative;
+  height: unit(6);
+  // color: color($theme-color-text-inverse);
+  // background-color: color($theme-color-background-inverse);
+  border-width: 1px;
+  border-color: color($theme-color-background);
+  z-index: 5000;
+
+  @include at-media("desktop") {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: unit(8);
+    height: 100%;
+    border-left-style: solid;
+  }
 }
