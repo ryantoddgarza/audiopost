@@ -25,6 +25,7 @@ module.exports = {
     },
     // 3. transformer plugins
     // 4. other plugins
+    'gatsby-plugin-react-svg',
     {
       resolve: '@bitpas/gatsby-plugin-seo',
       options: {
