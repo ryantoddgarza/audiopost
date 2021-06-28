@@ -1,0 +1,131 @@
+.navigation {
+  z-index: 5000;
+}
+
+// Layout elements
+
+.navigation .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: unit($theme-topnav-height);
+  padding-left: unit($theme-site-margins-width);
+  padding-right: unit($theme-site-margins-width);
+  border-width: 1px;
+  border-color: color($theme-color-background);
+
+  @include at-media("desktop") {
+    width: unit($theme-sidenav-width);
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: unit($theme-site-margins-width);
+    padding-bottom: unit($theme-site-margins-width);
+    writing-mode: vertical-rl;
+    border-left-style: solid;
+  }
+}
+
+.navigation .start,
+.navigation .center {
+  margin-right: unit(2);
+
+  @include at-media("desktop") {
+    margin-right: 0;
+    margin-bottom: unit(2);
+  }
+}
+
+.navigation .center {
+  flex: 1;
+}
+
+// Content elements
+
+.navigation .item {
+  line-height: line-height($theme-line-height-ui);
+}
+
+.navigation .link--icon {
+  padding: unit(0.5);
+}
+
+.navigation .nav {
+  display: flex;
+}
+
+.navigation .nav .item:not(:last-child) {
+  margin-right: unit(2);
+
+  @include at-media("desktop") {
+    margin-bottom: unit(2);
+    margin-right: 0;
+  }
+}
+
+.navigation .social {
+  display: flex;
+}
+
+.navigation .social .item:not(:last-child) {
+  margin-right: unit(1);
+
+  @include at-media("desktop") {
+    margin-bottom: unit(2);
+    margin-right: 0;
+  }
+}
+
+.navigation .item,
+.navigation .nav > *,
+.navigation .social > * {
+  display: inline-flex;
+}
+
+.navigation svg {
+  @include at-media("desktop") {
+    transform: rotate(90deg);
+  }
+}
+
+.navigation .logo svg {
+  height: unit(6);
+  width: auto;
+  fill: color($theme-color-primary);
+}
+
+.navigation .social svg {
+  font-size: unit(2.5);
+}
+
+// Theme variants
+
+.navigation.light {
+  color: color($theme-color-text);
+  background-color: color($theme-color-background);
+
+  .link,
+  .link--icon {
+    color: color($theme-color-text);
+
+    &:hover,
+    &:active {
+      color: color($theme-color-primary);
+    }
+  }
+}
+
+.navigation.dark {
+  color: color($theme-color-text-inverse);
+  background-color: color($theme-color-background-inverse);
+
+  .link,
+  .link--icon {
+    color: color($theme-color-text-inverse);
+
+    &:hover,
+    &:active {
+      color: color($theme-color-primary);
+    }
+  }
+}
