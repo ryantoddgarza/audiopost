@@ -1,4 +1,5 @@
 module.exports = {
+  htmlId: 'gear',
   component: 'list',
   title: 'Gear List',
   list: [

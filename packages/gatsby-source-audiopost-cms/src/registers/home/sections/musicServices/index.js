@@ -1,4 +1,5 @@
 module.exports = {
+  htmlId: 'services',
   component: 'list',
   title: 'Music Production Services',
   list: [

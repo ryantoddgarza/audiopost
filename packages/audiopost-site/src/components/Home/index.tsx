@@ -28,6 +28,7 @@ const Home: FunctionComponent = () => {
       }
       registers(settings: { slug: { eq: "/" } }) {
         sections {
+          htmlId
           component
           title
           body
@@ -46,8 +47,8 @@ const Home: FunctionComponent = () => {
         subtitle={hero.subtitle}
         copy={hero.copy.copy}
       />
-      {sections.map(({ component, title, body, list }, i: number) => (
-        <section key={`${i}`} className="section section--light">
+      {sections.map(({ htmlId, component, title, body, list }, i: number) => (
+        <section key={i} id={htmlId} className="section section--light">
           <div className="container container--constrain">
             {title && <h3 className="heading">{title}</h3>}
             {body && <p>{body}</p>}
