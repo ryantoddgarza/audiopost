@@ -6,6 +6,22 @@ const autoprefixer = require('autoprefixer');
 const { siteMetadata: site } = config;
 
 module.exports = {
+  siteMetadata: {
+    navList: [
+      {
+        name: 'Services',
+        slug: '/#services',
+      },
+      {
+        name: 'Gear',
+        slug: '/#gear',
+      },
+      {
+        name: 'Contact',
+        slug: '/#contact',
+      },
+    ],
+  },
   plugins: [
     // 1. first priority plugins
     // 2. source plugins
