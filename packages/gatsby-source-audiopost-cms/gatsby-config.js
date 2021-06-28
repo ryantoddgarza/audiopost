@@ -1,4 +1,5 @@
 const site = require('./src/config');
+const navigation = require('./src/navigation');
 
 module.exports = {
   siteMetadata: {
@@ -9,5 +10,7 @@ module.exports = {
     description: site.description,
     author: site.author,
     email: site.email,
+    instagram: 'audiopost.studio',
+    navList: navigation,
   },
 };
