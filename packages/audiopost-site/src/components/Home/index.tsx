@@ -49,7 +49,7 @@ const Home: FunctionComponent = () => {
       />
       {sections.map(({ htmlId, component, title, body, list }, i: number) => (
         <section key={i} id={htmlId} className="section section--light">
-          <div className="container container--constrain">
+          <div className="layout container container--constrain">
             {title && <h3 className="heading">{title}</h3>}
             {body && <p>{body}</p>}
             {list && (

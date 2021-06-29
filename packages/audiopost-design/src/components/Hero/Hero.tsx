@@ -17,7 +17,7 @@ const Hero: FunctionComponent<HeroProps> = ({
 
   return (
     <div className={getHeroClasses()}>
-      <div className="inner container">
+      <div className="inner layout container">
         <div className="start">
           {titleStart && <h1 className="title">{titleStart}</h1>}
           {subtitle && <h2 className="subtitle">{subtitle}</h2>}
