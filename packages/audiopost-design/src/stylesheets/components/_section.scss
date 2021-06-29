@@ -6,7 +6,6 @@
 
 .section .heading {
   font-size: font-size-fluid(32, 4);
-  font-size: 48px;
   font-weight: $theme-font-weight-bold;
   line-height: line-height($theme-line-height-heading);
   @include font-outline;

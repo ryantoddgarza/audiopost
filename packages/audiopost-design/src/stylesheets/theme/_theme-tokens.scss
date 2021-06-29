@@ -21,9 +21,15 @@ $theme-letter-spacing-wide: 4;
 $theme-letter-spacing-wider: 6;
 $theme-letter-spacing-widest: 8;
 
-$theme-body-font-family: 3;
-$theme-body-font-size: 3;
-$theme-body-line-height: 4;
+$theme-type-scale-2xs: 1;
+$theme-type-scale-xs: 2;
+$theme-type-scale-sm: 4;
+$theme-type-scale-md: 6;
+$theme-type-scale-lg: 9;
+$theme-type-scale-xl: 11;
+$theme-type-scale-2xl: 13;
+$theme-type-scale-3xl: 15;
+$theme-type-scale-display: 17;
 
 $theme-color-primary: gold-40;
 
@@ -31,6 +37,8 @@ $theme-color-text: gray-90;
 $theme-color-text-inverse: gray-1;
 $theme-color-text-weak: gray-40;
 $theme-color-text-weak-hover: gray-90;
+
+// Color
 
 $theme-color-background: gray-1;
 $theme-color-background-inverse: gray-90;
@@ -40,6 +48,10 @@ $theme-color-link-hover: gold-60;
 $theme-color-link-active: gold-60;
 
 // General
+
+$theme-body-font-family: 3;
+$theme-body-font-size: 6;
+$theme-body-line-height: 4;
 
 $theme-site-margins-width: 2;
 

@@ -1,11 +1,11 @@
+// Structural elements
+
 .hero {
   position: relative;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
-
-// Layout elements
 
 .hero .inner {
   flex: 1;
@@ -34,7 +34,7 @@
   }
 }
 
-// Content elements
+// Visual elements
 
 .hero .title {
   font-size: font-size-fluid(80, 36);
@@ -55,17 +55,17 @@
 
 .hero .copy {
   width: 66%;
-  font-size: font-size(2);
+  font-size: font-size($theme-type-scale-sm);
   font-weight: $theme-font-weight-light;
   line-height: line-height($theme-line-height-extended);
 
   @include at-media("tablet") {
     width: 33%;
-    font-size: font-size(3);
+    font-size: font-size($theme-type-scale-md);
   }
 
   @include at-media("desktop") {
-    font-size: font-size(4);
+    font-size: font-size($theme-type-scale-lg);
   }
 }
 
