@@ -57,7 +57,7 @@
   width: 66%;
   font-size: font-size($theme-type-scale-sm);
   font-weight: $theme-font-weight-light;
-  line-height: line-height($theme-line-height-extended);
+  line-height: line-height($theme-line-height-body);
 
   @include at-media("tablet") {
     width: 33%;
