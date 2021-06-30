@@ -1,5 +1,7 @@
-@import 'at-media';
-@import 'font-outline';
-@import 'list-styles';
-@import 'typography';
-@import 'content-styles';
+@import "at-media";
+@import "font-outline";
+@import "list-styles";
+
+// Typography should be imported before content-styles
+@import "typography";
+@import "content-styles";
