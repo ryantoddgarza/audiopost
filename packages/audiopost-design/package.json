@@ -1,6 +1,6 @@
 {
   "name": "audiopost-design",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "author": "Ryan Todd Garza <ryantoddgarza@gmail.com>",
   "main": "index.js",
   "sass": "src/stylesheets/apds.scss",
