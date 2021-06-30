@@ -20,14 +20,17 @@
 
 @mixin headings-styles {
   h1 {
-    font-size: font-size(8);
+    font-size: font-size($theme-type-scale-2xl);
+    line-height: line-height($theme-line-height-heading);
   }
 
   h2 {
-    font-size: font-size(7);
+    font-size: font-size($theme-type-scale-xl);
+    line-height: line-height($theme-line-height-heading);
   }
 
   h3 {
-    font-size: font-size(6);
+    font-size: font-size($theme-type-scale-lg);
+    line-height: line-height($theme-line-height-heading);
   }
 }
