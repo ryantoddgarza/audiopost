@@ -6,5 +6,14 @@
   "devDependencies": {
     "@bitpas/eslint-config": "^0.4.0",
     "prettier": "^2.3.0"
+  },
+  "scripts": {
+    "format": "npm run format:code && npm run format:other",
+    "format:code": "npm run lint:code -- --fix",
+    "format:other": "npm run prettier -- --write",
+    "lint": "npm run lint:code && npm run lint:other",
+    "lint:code": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:other": "npm run prettier -- --check",
+    "prettier": "prettier \"**/*.md\""
   }
 }
