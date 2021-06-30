@@ -1,24 +1,35 @@
+// Structural elements
+
 .section {
   padding-top: unit(4);
   padding-bottom: unit(4);
   @include content-styles;
 }
 
+// Visual elements
+
 .section .heading {
   font-size: font-size-fluid(32, 4);
   font-weight: $theme-font-weight-bold;
   line-height: line-height($theme-line-height-heading);
-  @include font-outline;
 }
 
-// Themes
+// Theme variants
 
-.section--light {
+.section.light {
   color: color($theme-color-text);
   background-color: color($theme-color-background);
+
+  .heading {
+    @include font-outline(color($theme-color-text));
+  }
 }
 
-.section--dark {
+.section.dark {
   color: color($theme-color-text-inverse);
   background-color: color($theme-color-background-inverse);
+
+  .heading {
+    @include font-outline(color($theme-color-text-inverse));
+  }
 }
