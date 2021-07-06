@@ -1,0 +1,85 @@
+// About
+
+.home .about .copy {
+  margin-top: unit(4);
+  font-size: font-size($theme-type-scale-lg);
+  line-height: line-height($theme-line-height-body);
+}
+
+// Clients
+
+.home .client-block {
+  margin-top: unit(4);
+}
+
+.home .clients .client {
+  display: inline;
+  font-size: font-size-fluid(28);
+  line-height: line-height($theme-line-height-ui);
+  text-transform: uppercase;
+
+  &:nth-of-type(odd) {
+    color: color(gray-50);
+  }
+
+  &:nth-of-type(even) {
+    color: color(gray-40);
+  }
+}
+
+.home .clients .link {
+  &:hover {
+    color: color($theme-color-link-hover);
+  }
+}
+
+// Services
+
+.home .services .article {
+  margin-top: unit(4);
+}
+
+.home .services .title {
+  font-size: font-size($theme-type-scale-lg);
+  line-height: line-height($theme-line-height-heading);
+  text-transform: uppercase;
+}
+
+.home .services .list {
+  margin-top: unit(2);
+  padding-right: unit(4);
+  line-height: line-height($theme-line-height-extended);
+}
+
+// Gear
+
+.home .gear .body {
+  margin-top: unit(4);
+  font-size: font-size($theme-type-scale-md);
+  line-height: line-height($theme-line-height-extended);
+}
+
+// Consulting
+
+.consulting .copy {
+  margin-top: unit(4);
+  font-size: font-size($theme-type-scale-lg);
+  font-weight: $theme-font-weight-light;
+  line-height: line-height($theme-line-height-extended);
+}
+
+// Contact
+
+.home .contact .body {
+  margin-top: unit(4);
+}
+
+.home .contact .big-link {
+  color: color($theme-color-link);
+  font-size: font-size-fluid(28);
+  line-height: line-height($theme-line-height-ui);
+
+  &:hover {
+    color: color($theme-color-link-hover);
+  }
+}
