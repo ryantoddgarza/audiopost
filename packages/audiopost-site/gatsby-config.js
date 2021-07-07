@@ -1,11 +1,19 @@
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 
-const config = require('gatsby-source-audiopost-cms/gatsby-config');
 const autoprefixer = require('autoprefixer');
-
-const { siteMetadata: site } = config;
+const site = require('./config');
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: site.url,
+    siteName: site.title,
+    titleTemplate: `%s | ${site.title}`,
+    shortDescription: site.shortDescription,
+    description: site.description,
+    author: site.author,
+    email: site.email,
+    instagram: 'audiopost.studio',
+  },
   plugins: [
     // 1. first priority plugins
     // 2. source plugins
@@ -37,6 +45,20 @@ module.exports = {
             { name: 'author', content: site.author },
           ],
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: site.title,
+        short_name: site.shortName,
+        description: site.description,
+        icon: site.favicon,
+        lang: 'en',
+        start_url: '/',
+        background_color: site.backgroundColor,
+        theme_color: site.themeColor,
+        display: 'minimal-ui',
       },
     },
     // 5. last priority plugins
