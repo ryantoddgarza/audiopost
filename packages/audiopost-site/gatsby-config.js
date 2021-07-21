@@ -1,6 +1,6 @@
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 
-const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const site = require('./config');
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        postCssPlugins: [autoprefixer()],
+        postCssPlugins: [cssnano()],
       },
     },
     // 3. transformer plugins
