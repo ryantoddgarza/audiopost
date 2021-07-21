@@ -16,6 +16,7 @@
     "@bitpas/gatsby-plugin-seo": "^0.4.0",
     "@contentful/rich-text-react-renderer": "^15.0.0",
     "cssnano": "^4.1.11",
+    "dotenv": "^10.0.0",
     "gatsby": "^3.4.2",
     "gatsby-plugin-manifest": "^3.9.0",
     "gatsby-plugin-react-svg": "^3.0.1",
