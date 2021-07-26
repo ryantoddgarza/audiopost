@@ -1,16 +1,15 @@
+.home .section .content {
+  margin-top: unit(4);
+}
+
 // About
 
 .home .about .copy {
-  margin-top: unit(4);
   font-size: font-size($theme-type-scale-lg);
   line-height: line-height($theme-line-height-body);
 }
 
 // Clients
-
-.home .client-block {
-  margin-top: unit(4);
-}
 
 .home .clients .client {
   display: inline;
@@ -33,10 +32,57 @@
   }
 }
 
+// Featured
+
+.home .featured-in .row {
+  margin-left: unit(2) * -1;
+  margin-right: unit(2) * -1;
+}
+
+.home .featured-in .col {
+  padding-left: unit(2);
+  padding-right: unit(2);
+  padding-bottom: unit(2);
+}
+
+.home .featured-in .card {
+  padding-top: unit(2);
+  padding-bottom: unit(2);
+  border-top-width: 2px;
+  border-top-color: inherit;
+  border-top-style: solid;
+}
+
+.home .featured-in .link {
+  &:hover {
+    color: color($theme-color-link-hover);
+  }
+}
+
+.home .featured-in .publication {
+  font-size: font-size($theme-type-scale-lg);
+  font-weight: $theme-font-weight-bold;
+  line-height: line-height($theme-line-height-heading);
+}
+
+.home .featured-in .title {
+  margin-top: unit(1);
+  font-size: font-size($theme-type-scale-md);
+  line-height: line-height($theme-line-height-body);
+}
+
 // Services
 
 .home .services .article {
-  margin-top: unit(4);
+  &:not(:last-child) {
+    margin-bottom: unit(4);
+  }
+
+  @include at-media("tablet") {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .home .services .title {
@@ -47,14 +93,16 @@
 
 .home .services .list {
   margin-top: unit(2);
-  padding-right: unit(4);
   line-height: line-height($theme-line-height-extended);
+
+  @include at-media("tablet") {
+    padding-right: unit(4);
+  }
 }
 
 // Gear
 
-.home .gear .body {
-  margin-top: unit(4);
+.home .gear .copy {
   font-size: font-size($theme-type-scale-md);
   line-height: line-height($theme-line-height-extended);
 }
@@ -62,17 +110,12 @@
 // Consulting
 
 .consulting .copy {
-  margin-top: unit(4);
   font-size: font-size($theme-type-scale-lg);
   font-weight: $theme-font-weight-light;
   line-height: line-height($theme-line-height-extended);
 }
 
 // Contact
-
-.home .contact .body {
-  margin-top: unit(4);
-}
 
 .home .contact .big-link {
   color: color($theme-color-link);
