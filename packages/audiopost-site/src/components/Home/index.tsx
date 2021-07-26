@@ -14,6 +14,7 @@ const Home: FunctionComponent = () => {
     musicServices,
     postServices,
     gearList,
+    allContentfulFeaturedIn: { featuredIn },
     consulting,
   } = useStaticQuery(graphql`
     query HomeQuery {
@@ -41,6 +42,13 @@ const Home: FunctionComponent = () => {
       allContentfulClient {
         clients: nodes {
           name
+          link
+        }
+      }
+      allContentfulFeaturedIn(sort: { fields: name }) {
+        featuredIn: nodes {
+          name
+          publication
           link
         }
       }
@@ -87,7 +95,7 @@ const Home: FunctionComponent = () => {
           <div className="col size11of12-tablet size2of3-desktop size7of12-widescreen offset1of12-tablet offset1of6-desktop">
             <div className="support-text">{about.name}</div>
             <h2 className="heading">Welcome to Audio Post</h2>
-            <div className="copy col size3of4-tablet">
+            <div className="content copy col size3of4-tablet">
               {documentToReactComponents(JSON.parse(about.body.raw))}
             </div>
           </div>
@@ -101,7 +109,7 @@ const Home: FunctionComponent = () => {
           <div className="col size5of6-tablet size2of3-desktop offset1of12-tablet offset1of6-desktop">
             <h3 className="support-text">Let&apos;s work together</h3>
             <h2 className="col heading">Services</h2>
-            <div className="row">
+            <div className="content row">
               <div className="article col size1of2-tablet">
                 <h3 className="title">{musicServices.name}</h3>
                 <ul className="list">
@@ -127,12 +135,48 @@ const Home: FunctionComponent = () => {
           <div className="col size11of12-tablet size5of6-desktop size3of4-widescreen offset1of12-tablet offset1of6-desktop">
             <h3 className="support-text">Select</h3>
             <h2 className="heading">Clients</h2>
-            <div className="client-block">
+            <div className="content">
               {clients.map(({ name, link }) => (
                 <div key={name} className="client">
-                  <a href={link} className="link">
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
                     {name + ` `}
                   </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="featured"
+        className="section dark layout container featured-in"
+      >
+        <div className="row">
+          <div className="col size5of6-tablet size2of3-desktop offset1of12-tablet offset1of6-desktop">
+            <h3 className="support-text">On the web</h3>
+            <h2 className="heading">Featured In</h2>
+            <div className="content row">
+              {featuredIn.map(({ name, publication, link }) => (
+                <div
+                  key={name}
+                  className="col size1of2-tablet size1of3-widescreen"
+                >
+                  <div className="card">
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="link"
+                    >
+                      <div className="publication">{publication}</div>
+                      <div className="title">{name}</div>
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
@@ -144,7 +188,7 @@ const Home: FunctionComponent = () => {
           <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
             <h3 className="support-text">Studio</h3>
             <h2 className="heading">{gearList.name}</h2>
-            <div className="body">
+            <div className="content copy">
               {gearList.items.sort().map((gear: string) => (
                 <div key={gear.slice(10)}>{gear}</div>
               ))}
@@ -158,7 +202,7 @@ const Home: FunctionComponent = () => {
       >
         <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
           <h2 className="heading">{consulting.name}</h2>
-          <div className="copy">
+          <div className="content copy">
             {documentToReactComponents(JSON.parse(consulting.body.raw))}
           </div>
         </div>
@@ -167,7 +211,7 @@ const Home: FunctionComponent = () => {
         <div className="col size5of6-tablet size2of3-desktop offset1of12-tablet offset1of6-desktop">
           <h3 className="support-text">Get in touch</h3>
           <h2 className="heading">Contact</h2>
-          <div className="body">
+          <div className="content">
             <a href={`mailto:${email}`} className="big-link">
               {email}
             </a>
