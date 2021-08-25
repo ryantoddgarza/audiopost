@@ -1,0 +1,15 @@
+.menu > .item:not(:last-child) {
+  margin-bottom: unit(4);
+}
+
+.menu > .item > .title {
+  font-size: font-size($theme-type-scale-lg);
+  font-weight: $theme-font-weight-bold;
+  line-height: line-height($theme-line-height-heading);
+}
+
+.menu > .item > .description {
+  margin-top: unit(1);
+  font-size: font-size($theme-type-scale-sm);
+  line-height: line-height($theme-line-height-body);
+}
