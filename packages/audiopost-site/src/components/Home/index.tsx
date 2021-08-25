@@ -152,6 +152,38 @@ const Home: FunctionComponent = () => {
           </div>
         </div>
       </section>
+      <section
+        id="consulting"
+        className="section light layout container consulting"
+      >
+        <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
+          <h3 className="support-text">Professional</h3>
+          <h2 className="heading">{consulting.name}</h2>
+          <div className="content copy">
+            {documentToReactComponents(JSON.parse(consulting.body.raw))}
+          </div>
+        </div>
+      </section>
+      <section id="rates" className="section light layout container">
+        <div className="row">
+          <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
+            <h3 className="support-text">Standard</h3>
+            <h2 className="heading">{rates.name}</h2>
+          </div>
+          <div className="col size1of2-tablet size1of3-desktop size1of4-widescreen offset1of12-tablet offset1of6-desktop">
+            <div className="content">
+              <div className="menu">
+                {rates.items.map(({ name, description }) => (
+                  <div key={name} className="item">
+                    <h6 className="title">{name}</h6>
+                    <p className="description">{description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="clients" className="section dark layout container clients">
         <div className="row">
           <div className="col size11of12-tablet size5of6-desktop size3of4-widescreen offset1of12-tablet offset1of6-desktop">
@@ -215,38 +247,6 @@ const Home: FunctionComponent = () => {
                 <div key={gear.slice(10)}>{gear}</div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="rates" className="section dark layout container">
-        <div className="row">
-          <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
-            <h3 className="support-text">Standard</h3>
-            <h2 className="heading">{rates.name}</h2>
-          </div>
-          <div className="col size1of2-tablet size1of3-desktop size1of4-widescreen offset1of12-tablet offset1of6-desktop">
-            <div className="content">
-              <div className="menu">
-                {rates.items.map(({ name, description }) => (
-                  <div key={name} className="item">
-                    <h6 className="title">{name}</h6>
-                    <p className="description">{description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="consulting"
-        className="section dark layout container consulting"
-      >
-        <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
-            <h3 className="support-text">Professional</h3>
-          <h2 className="heading">{consulting.name}</h2>
-          <div className="content copy">
-            {documentToReactComponents(JSON.parse(consulting.body.raw))}
           </div>
         </div>
       </section>
