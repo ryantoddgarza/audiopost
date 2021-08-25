@@ -50,8 +50,13 @@
   padding: unit(0.5);
 }
 
-.navigation .nav {
-  display: flex;
+.navigation .nav,
+.navigation .social {
+  display: none;
+
+  @include at-media("desktop") {
+    display: flex;
+  }
 }
 
 .navigation .nav .item:not(:last-child) {
@@ -61,10 +66,6 @@
     margin-bottom: unit(2);
     margin-right: 0;
   }
-}
-
-.navigation .social {
-  display: flex;
 }
 
 .navigation .social .item:not(:last-child) {
