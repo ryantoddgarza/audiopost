@@ -14,6 +14,7 @@ const Home: FunctionComponent = () => {
     musicServices,
     postServices,
     gearList,
+    rates,
     allContentfulFeaturedIn: { featuredIn },
     consulting,
   } = useStaticQuery(graphql`
@@ -70,6 +71,13 @@ const Home: FunctionComponent = () => {
         name
         items
       }
+      rates: contentfulMenu(contentful_id: { eq: "1n6g5F87hU5caKHFkinm4f" }) {
+        name
+        items {
+          name
+          description
+        }
+      }
       consulting: contentfulLongText(
         contentful_id: { eq: "4JYy8vjMAqOmKx6fKmuIFw" }
       ) {
@@ -80,6 +88,20 @@ const Home: FunctionComponent = () => {
       }
     }
   `);
+
+  // const rates = [
+  //   { name: 'Mixing', description: '$250 per song' },
+  //   { name: 'Mastering', description: '$100 per song' },
+  //   {
+  //     name: 'Song Production',
+  //     description: '$500 per song (discounted mix and master)',
+  //   },
+  //   {
+  //     name: 'Custom Services',
+  //     description:
+  //       'Rates Vary. Reach out to discuss how best to work within your budget and timeline',
+  //   },
+  // ];
 
   return (
     <div className="home">
@@ -196,11 +218,32 @@ const Home: FunctionComponent = () => {
           </div>
         </div>
       </section>
+      <section id="rates" className="section dark layout container">
+        <div className="row">
+          <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
+            <h3 className="support-text">Standard</h3>
+            <h2 className="heading">{rates.name}</h2>
+          </div>
+          <div className="col size1of2-tablet size1of3-desktop size1of4-widescreen offset1of12-tablet offset1of6-desktop">
+            <div className="content">
+              <div className="menu">
+                {rates.items.map(({ name, description }) => (
+                  <div key={name} className="item">
+                    <h6 className="title">{name}</h6>
+                    <p className="description">{description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         id="consulting"
         className="section dark layout container consulting"
       >
         <div className="col size2of3-tablet size1of2-desktop offset1of12-tablet offset1of6-desktop">
+            <h3 className="support-text">Professional</h3>
           <h2 className="heading">{consulting.name}</h2>
           <div className="content copy">
             {documentToReactComponents(JSON.parse(consulting.body.raw))}
