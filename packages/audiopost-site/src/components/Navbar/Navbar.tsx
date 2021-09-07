@@ -4,17 +4,13 @@ import Start from './NavbarStart';
 import Center from './NavbarCenter';
 import End from './NavbarEnd';
 
-// interface Props {}
-
-const Navbar: FunctionComponent = () => {
-  return (
-    <Navigation
-      start={<Start />}
-      center={<Center />}
-      end={<End />}
-      theme={navigationThemes.DARK}
-    />
-  );
-};
+const Navbar: FunctionComponent = () => (
+  <Navigation
+    start={<Start />}
+    center={<Center />}
+    end={<End />}
+    theme={navigationThemes.DARK}
+  />
+);
 
 export default Navbar;

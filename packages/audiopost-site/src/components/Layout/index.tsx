@@ -14,6 +14,7 @@ const Layout: FunctionComponent<Props> = ({ children }: Props) => {
   const childrenWithProps = Children.map(children, (child) =>
     cloneElement(child, {})
   );
+
   return (
     <div className="layout app">
       <div className="layout nav">

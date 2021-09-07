@@ -89,20 +89,6 @@ const Home: FunctionComponent = () => {
     }
   `);
 
-  // const rates = [
-  //   { name: 'Mixing', description: '$250 per song' },
-  //   { name: 'Mastering', description: '$100 per song' },
-  //   {
-  //     name: 'Song Production',
-  //     description: '$500 per song (discounted mix and master)',
-  //   },
-  //   {
-  //     name: 'Custom Services',
-  //     description:
-  //       'Rates Vary. Reach out to discuss how best to work within your budget and timeline',
-  //   },
-  // ];
-
   return (
     <div className="home">
       <Hero
