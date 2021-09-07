@@ -98,7 +98,7 @@ const Home: FunctionComponent = () => {
         subtitle={hero.subtitle}
         copy={hero.copy.copy}
       />
-      <section className="section light layout container about">
+      <section id="about" className="section light layout container about">
         <div className="row">
           <div className="col size11of12-tablet size2of3-desktop size7of12-widescreen offset1of12-tablet offset1of6-desktop">
             <div className="support-text">{about.name}</div>
@@ -170,7 +170,7 @@ const Home: FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <section id="clients" className="section dark layout container clients">
+      <section id="featured" className="section dark layout container clients">
         <div className="row">
           <div className="col size11of12-tablet size5of6-desktop size3of4-widescreen offset1of12-tablet offset1of6-desktop">
             <h3 className="support-text">Select</h3>
@@ -192,10 +192,7 @@ const Home: FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <section
-        id="featured"
-        className="section dark layout container featured-in"
-      >
+      <section className="section dark layout container featured-in">
         <div className="row">
           <div className="col size5of6-tablet size2of3-desktop offset1of12-tablet offset1of6-desktop">
             <h3 className="support-text">On the web</h3>
