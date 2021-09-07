@@ -10,6 +10,7 @@ const Home: FunctionComponent = () => {
     },
     hero,
     about,
+    aboutKyle,
     allContentfulClient: { clients },
     musicServices,
     postServices,
@@ -34,6 +35,14 @@ const Home: FunctionComponent = () => {
       }
       about: contentfulLongText(
         contentful_id: { eq: "4UsEcKmvmSHGw8xkL1tX1T" }
+      ) {
+        name
+        body {
+          raw
+        }
+      }
+      aboutKyle: contentfulLongText(
+        contentful_id: { eq: "49zKliWuRfZ3V6cloa1u0O" }
       ) {
         name
         body {
@@ -98,13 +107,23 @@ const Home: FunctionComponent = () => {
         subtitle={hero.subtitle}
         copy={hero.copy.copy}
       />
-      <section id="about" className="section light layout container about">
+      <section id="about" className="section light layout container about large">
         <div className="row">
-          <div className="col size11of12-tablet size2of3-desktop size7of12-widescreen offset1of12-tablet offset1of6-desktop">
+          <div className="col size11of12-tablet size2of3-desktop size7of12-widescreen offset1of6-tablet offset1of3-desktop">
             <div className="support-text">{about.name}</div>
             <h2 className="heading">Welcome to Audio Post</h2>
             <div className="content copy col size3of4-tablet">
               {documentToReactComponents(JSON.parse(about.body.raw))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section light layout container about regular">
+        <div className="row">
+          <div className="col size11of12-tablet size2of3-desktop size7of12-widescreen offset1of12-tablet offset1of6-desktop">
+            <div className="support-text">{aboutKyle.name}</div>
+            <div className="content copy">
+              {documentToReactComponents(JSON.parse(aboutKyle.body.raw))}
             </div>
           </div>
         </div>
