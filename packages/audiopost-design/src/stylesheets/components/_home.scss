@@ -4,7 +4,17 @@
 
 // About
 
-.home .about .copy {
+.home .about .copy p {
+  margin-top: unit(3);
+  margin-bottom: unit(3);
+}
+
+.home .about.regular .copy {
+  font-size: font-size($theme-type-scale-md);
+  line-height: line-height($theme-line-height-extended);
+}
+
+.home .about.large .copy {
   font-size: font-size($theme-type-scale-lg);
   line-height: line-height($theme-line-height-body);
 }
