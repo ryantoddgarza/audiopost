@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@bitpas/eslint-config": "^0.4.0",
+    "@bitpas/eslint-config": "^0.6.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0"
   },
