@@ -1,5 +1,7 @@
 # audiopost-site
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3020d363-0c06-4316-808b-12030d6bf7ed/deploy-status)](https://app.netlify.com/sites/audiopost/deploys)
+
 The web client is built with [React](https://reactjs.org/) and served as a static site generated with [Gatsby](https://www.gatsbyjs.com/).
 
 ## Develop
